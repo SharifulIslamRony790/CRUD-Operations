@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}View Student{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            
+            <div class="card" style="background-color: antiquewhite;">
+                <div class="card-header" style="background-color: brown; color: white;">
+                    <h3 class="mb-0">Student Details</h3>
+                </div>
+                
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th width="200">Name:</th>
+                            <td>{{ student.name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Roll Number:</th>
+                            <td>{{ student.roll }}</td>
+                        </tr>
+                        <tr>
+                            <th>School:</th>
+                            <td>{{ student.school }}</td>
+                        </tr>
+                        <tr>
+                            <th>Address:</th>
+                            <td>{{ student.address }}</td>
+                        </tr>
+                        <tr>
+                            <th>Description:</th>
+                            <td>{{ student.description }}</td>
+                        </tr>
+                        <tr>
+                            <th>Admission Date:</th>
+                            <td>{{ student.addmission_date|date:"d M Y, h:i A" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Status:</th>
+                            <td>
+                                {% if student.is_active %}
+                                    <span class="badge bg-success">Active</span>
+                                {% else %}
+                                    <span class="badge bg-secondary">Inactive</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <div class="mt-3">
+                        <a href="{% url 'student_update' student.pk %}" class="btn btn-primary">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        <a href="{% url 'student_delete' student.pk %}" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                        <a href="{% url 'student_list' %}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
