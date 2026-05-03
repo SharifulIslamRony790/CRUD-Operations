@@ -97,12 +97,6 @@ Follow these steps to set up the project locally:
 | `/posts/list/` | GET | View all blog posts |
 | `/admin/` | GET/POST | Management interface |
 
-## Screenshots
-
-> *Placeholder: Add your application screenshots here*
-
-![Post List View](https://via.placeholder.com/800x400?text=Post+List+View+Screenshot)
-
 ## Contributing Guidelines
 
 1. Fork the Project
