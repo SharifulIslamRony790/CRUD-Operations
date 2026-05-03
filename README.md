@@ -119,4 +119,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Project Developer**
 - GitHub: [@SharifulIslamRony790](https://github.com/SharifulIslamRony790)
-- Email: your.email@example.com
+- Email: mdsharifulislamrony790@gmail.com
